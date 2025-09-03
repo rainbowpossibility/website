@@ -1,71 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Rainbow Possibility Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: sans-serif;
-      text-align: center;
-      padding: 60px;
-      background: #fdfdfd;
-      color: #333;
+    :root{
+      --bg1:#f3f4f6;--bg2:#ffffff;--card:#fff;--text:#1f2937;--muted:#4b5563;--border:#e5e7eb;
+      --shadow:0 10px 25px rgba(0,0,0,.08);--radius:18px;
     }
-  img.foundation-name {
-    max-width: 816px; /* approx 8.5 inches */
-    width: 90vw;      /* scales with viewport */
-    height: auto;
-    margin: 20px auto;
-    display: block;
-  }
-  img.headshot {
-    max-width: 150px;
-    border-radius: 100%;
-    margin: 20px auto;
-    display: block;
-  }
-  img.foundation-quote {
-    max-width: 816px; /* approx 8.5 inches */
-    width: 90vw;      /* scales with viewport */
-    height: auto;
-    margin: 40px auto 0;
-    display: block;
-  }
-
-    ul {
-      list-style-type: none; 
-      padding: 0;
-      max-width: 400px;
-      margin: 0 auto;
-      text-align: left;
-    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text)}
+    .container{max-width:980px;margin:48px auto;padding:0 20px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+    .hero{padding:28px 24px 14px;text-align:center;
+      background:
+        radial-gradient(1200px 200px at 50% -80px, rgba(99,102,241,.12), transparent),
+        linear-gradient(90deg, rgba(239,68,68,.08), rgba(245,158,11,.08), rgba(234,179,8,.08),
+                               rgba(34,197,94,.08), rgba(59,130,246,.08), rgba(139,92,246,.08), rgba(236,72,153,.08));
+      border-bottom:1px solid var(--border)}
+    .logo{max-width:820px;width:min(92vw,820px);height:auto;display:block;margin:8px auto}
+    .tag{display:inline-block;margin:10px auto 6px;padding:6px 10px;font-size:12px;letter-spacing:.03em;text-transform:uppercase;
+      color:#374151;border-radius:999px;background:#fff;border:1px solid var(--border)}
+    .rainbow-rule{height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ec4899);
+      border-radius:2px;margin:12px auto 0;width:min(92vw,860px)}
+    .section{padding:22px 20px}
+    .section+.section{border-top:1px solid var(--border)}
+    h1,h2,h3{margin:0 0 10px}
+    h1{font-size:clamp(22px,4vw,28px)}
+    h2{font-size:clamp(18px,3vw,22px);margin-top:8px}
+    h3{font-size:clamp(16px,2.4vw,18px);margin-top:6px}
+    p{margin:8px 0 14px;color:var(--muted);line-height:1.6}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:8px}
+    .pill{background:#f8fafc;border:1px solid var(--border);padding:10px 12px;border-radius:12px}
+    .founder{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:center;max-width:680px;margin:0 auto;text-align:left}
+    .headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
+    .board{list-style:none;padding:0;margin:8px auto 0;max-width:640px;text-align:left}
+    .board li{padding:8px 0;border-bottom:1px dashed var(--border)}
+    .board li:last-child{border-bottom:0}
+    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0 2px}
+    .btn{appearance:none;border:0;background:#111827;color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600;
+      text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 16px rgba(17,24,39,.15)}
+    .btn.secondary{background:#fff;color:#111827;border:1px solid var(--border);box-shadow:none}
+    footer{text-align:center;color:#6b7280;font-size:13px;padding:18px 10px 36px}
+    @media (max-width:520px){.founder{grid-template-columns:60px 1fr}.headshot{width:60px;height:60px}}
   </style>
 </head>
 <body>
+  <div class="container">
+    <main class="card" role="main">
+      <header class="hero">
+        <!-- Top logo image (kept) -->
+        <img class="logo" src="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/RainbowNameWebsiteCropped.png"
+             alt="Rainbow Possibility Foundation logo" />
+        <div class="tag">IRS 501(c)(3) Public Charity</div>
+        <div class="rainbow-rule" aria-hidden="true"></div>
+      </header>
 
-  <!-- Foundation name image at the top -->
-  <img src="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/RainbowNameWebsiteCropped.png" alt="Rainbow Possibility Foundation" class="foundation-name">
+      <section class="section" aria-labelledby="mission">
+        <h1 id="mission">Mission</h1>
+        <p><strong>The Rainbow Possibility Foundation funds and delivers tangible educational materials, supplies, and resources to students in underserved Los Angeles public high schools.</strong></p>
+        <p>Our support ensures students can learn by doing: They dream, build, create, and bring their ideas to life with the materials in their hands, in a classroom environment equipped for their innovation.</p>
+        <div class="actions">
+          <a class="btn" href="mailto:info@rainbowpossibility.org">Contact Us</a>
+          <a class="btn secondary" href="#donate">Donate (coming soon)</a>
+        </div>
+      </section>
 
-  <h1>Coming Soon</h1>
-  <p>The Rainbow Possibility Foundation is getting ready to launch!</p>
+      <section class="section" aria-labelledby="whatwedo">
+        <h2 id="whatwedo">What We Do</h2>
+        <div class="grid">
+          <div class="pill"><strong>Supplies, not slogans.</strong> Hot glue, lab kits, electronics, wood, fasteners — real materials students use today.</div>
+          <div class="pill"><strong>Hands-on STEAM.</strong> Project-based learning where students design, test, and iterate.</div>
+          <div class="pill"><strong>Barrier-free classrooms.</strong> No canceled labs for lack of supplies.</div>
+        </div>
+      </section>
 
-  <img src="https://raw.githubusercontent.com/rainbowpossibility/website/87545ffef46b04246c64e15cbbe603504930d97f/WebsiteHeadshot.png" alt="Kristopher Brackebusch" class="headshot">
+      <section class="section" aria-labelledby="founder">
+        <h2 id="founder">Founder</h2>
+        <div class="founder">
+          <!-- Headshot image (kept) -->
+          <img class="headshot" src="https://raw.githubusercontent.com/rainbowpossibility/website/87545ffef46b04246c64e15cbbe603504930d97f/WebsiteHeadshot.png"
+               alt="Headshot of Kristopher Brackebusch" />
+          <div>
+            <h3 style="margin-top:0">Kristopher Brackebusch</h3>
+            <p>Founder &amp; President — A Los Angeles public school teacher bringing hands-on learning to his classroom and students since 2012.</p>
+          </div>
+        </div>
+      </section>
 
-  <h2>Kristopher Brackebusch</h2>
-  <p>Founder & President -- A public school teacher in Los Angeles who loves his job and founded Rainbow Possibility in order to support bringing his students' dreams to life</p>
+      <section class="section" aria-labelledby="board">
+        <h2 id="board">Officers &amp; Board</h2>
+        <ul class="board">
+          <li><strong>Kristopher Brackebusch</strong> — President</li>
+          <li><strong>Jose Castaneda</strong> — Secretary, Treasurer</li>
+          <li><strong>Max Krakora</strong> — Board Member</li>
+          <li><strong>Tyler Krakora</strong> — Board Member</li>
+          <li><strong>Christy Jansen</strong> — Board Member</li>
+          <li><strong>Anna Attard</strong> — Board Member</li>
+        </ul>
+      </section>
 
-  <h3>Officers and Board Members</h3>
-  <ul>
-    <li><strong>Kristopher Brackebusch</strong> – President</li>
-    <li><strong>Jose Castaneda</strong> – Secretary, Treasurer</li>
-    <li><strong>Max Krakora</strong> – Board Member</li>
-    <li><strong>Tyler Krakora</strong> – Board Member</li>
-    <li><strong>Christy Jansen</strong> – Board Member</li>
-    <li><strong>Anna Attard</strong> – Board Member</li>
-  </ul>
+      <section class="section" id="donate" aria-labelledby="donate-h">
+        <h2 id="donate-h">Donate</h2>
+        <p>Online donations are coming soon. In the meantime, please email <a href="mailto:info@rainbowpossibility.org">info@rainbowpossibility.org</a> to support a specific classroom project or supply purchase.</p>
+      </section>
 
-  <!-- Foundation quote image at the bottom -->
-  <img src="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/RainbowQuoteWebsiteCropped.png" alt="Foundation Quote" class="foundation-quote">
+      <section class="section" aria-labelledby="quote">
+        <h2 id="quote" style="text-align:center">“Rainbow Possibility”</h2>
+        <!-- Quote image (kept) -->
+        <img class="logo" style="max-width:820px;margin:10px auto 0"
+             src="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/RainbowQuoteWebsiteCropped.png"
+             alt="I am forever learning, growing, and becoming more of who I wish to be. For my life is a journey, and I am rainbow possibility." />
+      </section>
+    </main>
 
+    <footer>
+      © <span id="y"></span> Rainbow Possibility Foundation • Los Angeles, CA • A 501(c)(3) public charity
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
