@@ -1,3 +1,10 @@
+/* Load Bamboo logo font */
+@font-face {
+  font-family: 'Bamboo';
+  src: url('fonts/Bamboo-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+
 :root {
   --bg1:#f3f4f6;
   --bg2:#ffffff;
@@ -29,14 +36,15 @@ body {
    TYPOGRAPHY HIERARCHY
 ============================ */
 
-/* Major Section Headings */
+
+/* Major Section Headings – broader, friendlier */
 h1, h2 {
-  font-family:'Bebas Neue', sans-serif;
-  letter-spacing:0.02em;
-  font-weight:400;
-  text-transform:uppercase;
-  color:#1f2937;
-  margin-bottom:8px;
+  font-family: 'Nunito Sans', 'Inter', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  color: #1f2937;
+  margin-bottom: 8px;
 }
 
 /* Subheadings / Nav / Buttons */
