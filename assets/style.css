@@ -384,18 +384,24 @@ footer {
   color:#6b7280;
   margin-top:6px;
 }
-.container::before {
+
+body {
+  position: relative;
+}
+
+/* Giant faint logo behind the main card */
+body::before {
   content: "";
-  position: fixed;         /* stays put as you scroll */
+  position: fixed;
   inset: 0;
-  background: url("assets/RainbowPossibilityLogo.png") no-repeat center center;
-  background-size: 5000px auto;   /* force supersize — much larger than viewport */
-  opacity: 0.15;                  /* temporarily stronger so you can see it */
-  filter: brightness(1) contrast(1);
+  background: url("RainbowPossibilityLogo.png") no-repeat center 30%;
+  background-size: 3200px auto;   /* force huge */
+  opacity: 0.09;                  /* make it clearly visible first */
   pointer-events: none;
   z-index: 0;
 }
 
+/* Lift content above the watermark */
 .container {
   position: relative;
   z-index: 1;
