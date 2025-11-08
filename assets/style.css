@@ -255,19 +255,9 @@ footer {
   text-align: center;
   line-height: 1.1;
   margin: 10px auto;
-}
+  width: fit-content;
 
-/* bottom layer: shadow only */
-.hero-logo .text-shadow {
-  position: absolute;
-  inset: 0;
-  color: rgba(0, 0, 0, 0.4);
-  filter: blur(4px);
-  z-index: 0;
-}
-
-/* top layer: gradient text */
-.hero-logo {
+  /* rainbow gradient inside the letters */
   background: linear-gradient(
     90deg,
     #FF8A8A, #FF9E73, #FFB86A, #FFD46C, #FFE66D,
@@ -279,5 +269,8 @@ footer {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  z-index: 1;
+
+  /* thin dark outline – NO blur, letters stay sharp */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  text-stroke: 0.5px rgba(0, 0, 0, 0.35); /* some browsers ignore this, that’s okay */
 }
