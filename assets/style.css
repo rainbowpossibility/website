@@ -384,15 +384,14 @@ footer {
   color:#6b7280;
   margin-top:6px;
 }
-
 .container::before {
   content: "";
-  position: absolute;
+  position: fixed;         /* stays put as you scroll */
   inset: 0;
-  background: url("assets/RainbowPossibilityLogo.png") no-repeat center 30%;
-  background-size: 2800px auto; /* adjust size */
-  opacity: 0.06;                /* make more or less visible */
-  filter: brightness(1.1) contrast(0.9);
+  background: url("assets/RainbowPossibilityLogo.png") no-repeat center center;
+  background-size: 5000px auto;   /* force supersize — much larger than viewport */
+  opacity: 0.15;                  /* temporarily stronger so you can see it */
+  filter: brightness(1) contrast(1);
   pointer-events: none;
   z-index: 0;
 }
