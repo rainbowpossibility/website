@@ -271,6 +271,6 @@ footer {
   color: transparent;
 
   /* thin dark outline – NO blur, letters stay sharp */
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.4);
-  text-stroke: 0.5px rgba(0, 0, 0, 0.4); /* some browsers ignore this, that’s okay */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  text-stroke: 0.5px rgba(0, 0, 0, 0.35); /* some browsers ignore this, that’s okay */
 }
