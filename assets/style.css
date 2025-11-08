@@ -292,12 +292,23 @@ p {
 }
 
 .btn.secondary {
-  background:linear-gradient(90deg,
-    #ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ec4899);
-  color:#fff;
-  border:none;
-  font-weight:700;
-  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  background: linear-gradient(
+    90deg,
+    #FF8A8A, #FF9E73, #FFB86A, #FFD46C, #FFE66D,
+    #DFFB8C, #BFF5A5, #9FF1AE, #82F0A8, #6CEFC1,
+    #6FDDEB, #72C4FA, #7AA9FA, #8E96F7, #A088F5,
+    #B180F3, #9C6BF0, #8354E7
+  );
+  color: #000;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.btn.secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  filter: brightness(0.95);
 }
 
 .btn:hover {
