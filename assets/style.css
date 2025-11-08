@@ -394,7 +394,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("RainbowPossibilityLogo.png") no-repeat center 120%;
+  background: url("RainbowPossibilityLogo.png") no-repeat center 80%;
   background-size: 2800px auto;   /* force huge */
   opacity: 0.09;                  /* make it clearly visible first */
   pointer-events: none;
