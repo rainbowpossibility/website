@@ -8,86 +8,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg1:#f3f4f6;--bg2:#ffffff;--card:#fff;--text:#1f2937;--muted:#4b5563;--border:#e5e7eb;
-      --shadow:0 10px 25px rgba(0,0,0,.08);--radius:18px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    html { scroll-behavior: smooth; }
-    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
-      background:linear-gradient(180deg,var(--bg1),var(--bg2));color:var(--text)}
-    .container{max-width:980px;margin:48px auto;padding:0 20px}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
-    .hero{padding:28px 24px 14px;text-align:center;
-      background:
-        radial-gradient(1200px 200px at 50% -80px, rgba(99,102,241,.12), transparent),
-        linear-gradient(90deg, rgba(239,68,68,.08), rgba(245,158,11,.08), rgba(234,179,8,.08),
-                               rgba(34,197,94,.08), rgba(59,130,246,.08), rgba(139,92,246,.08), rgba(236,72,153,.08));
-      border-bottom:1px solid var(--border)}
-    .logo{max-width:820px;width:min(92vw,820px);height:auto;display:block;margin:8px auto}
-    .tag{display:inline-block;margin:10px auto 6px;padding:6px 10px;font-size:12px;letter-spacing:.03em;text-transform:uppercase;
-      color:#374151;border-radius:999px;background:#fff;border:1px solid var(--border)}
-    .rainbow-rule{height:4px;background:linear-gradient(90deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ec4899);
-      border-radius:2px;margin:12px auto 0;width:min(92vw,860px)}
-    .section{padding:22px 20px}
-    .section+.section{border-top:1px solid var(--border)}
-    h1,h2,h3{margin:0 0 10px}
-    h1{font-size:clamp(22px,4vw,28px)}
-    h2{font-size:clamp(18px,3vw,22px);margin-top:8px}
-    h3{font-size:clamp(16px,2.4vw,18px);margin-top:6px}
-    p{margin:8px 0 14px;color:var(--muted);line-height:1.6}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:8px}
-    .pill{background:#f8fafc;border:1px solid var(--border);padding:10px 12px;border-radius:12px}
-    .founder{display:grid;grid-template-columns:84px 1fr;gap:16px;align-items:center;max-width:680px;margin:0 auto;text-align:left}
-    .headshot{width:84px;height:84px;border-radius:50%;object-fit:cover;border:2px solid var(--border)}
-    .board{list-style:none;padding:0;margin:8px auto 0;max-width:640px;text-align:left}
-    .board li{padding:8px 0;border-bottom:1px dashed var(--border)}
-    .board li:last-child{border-bottom:0}
-    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0 2px}
-    .btn{appearance:none;border:0;background:#111827;color:#fff;padding:10px 14px;border-radius:10px;cursor:pointer;font-weight:600;
-      text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 16px rgba(17,24,39,.15)}
-    .btn.secondary {
-  background: linear-gradient(90deg,
-    #ef4444, #f59e0b, #eab308, #22c55e, #3b82f6, #8b5cf6, #ec4899);
-  color: #fff;
-  border: none;
-  font-weight: 700;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-  transition: transform 0.1s ease, box-shadow 0.1s ease;
-}
-.btn.secondary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
-}
-
-    footer{text-align:center;color:#6b7280;font-size:13px;padding:18px 10px 36px}
-    @media (max-width:520px){.founder{grid-template-columns:60px 1fr}.headshot{width:60px;height:60px}}
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
   <div class="container">
     <main class="card" role="main">
       <header class="hero">
-        <img class="logo" src="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/RainbowNameWebsiteCropped.png"
+        <img class="logo" src="assets/RainbowNameWebsiteCropped.png"
              alt="Rainbow Possibility Foundation logo" />
         <div class="tag">IRS 501(c)(3) Public Charity</div>
         <div class="rainbow-rule" aria-hidden="true"></div>
+
+        <nav class="main-nav" aria-label="Primary navigation">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="impact.html" class="nav-link">Our Impact</a>
+          <a href="future.html" class="nav-link">Future Asks &amp; In-Kind Dreams</a>
+        </nav>
       </header>
 
-      <section class="section" aria-labelledby="mission">
-        <h1 id="mission">Mission</h1>
+      <section class="section" id="mission">
+        <h1>Mission</h1>
         <p><strong>The Rainbow Possibility Foundation equips Los Angeles public high school classrooms with tangible STEAM materials so students can learn by doing.</strong></p>
         <p>We focus on real supplies students touch: soldering kits, sensors, wood and fasteners, adhesives, safety gear, and lab consumables. When classrooms have parts on hand, teachers can run labs on time, students can iterate safely, and learning becomes concrete and memorable.</p>
         <div class="actions">
           <a class="btn" href="mailto:info@rainbowpossibility.org">Contact Us</a>
-          <a class="btn secondary" href="#donate" aria-label="Jump to donation form">Donate Now</a>
+          <a class="btn secondary" href="#donate">Donate Now</a>
         </div>
       </section>
 
-      <section class="section" aria-labelledby="whatwedo">
-        <h2 id="whatwedo">What We Do</h2>
+      <section class="section">
+        <h2>What We Do</h2>
         <div class="grid">
           <div class="pill"><strong>Supplies, not slogans.</strong> Hot glue, lab kits, electronics, wood, fasteners—real materials students use today.</div>
           <div class="pill"><strong>Hands-on STEAM.</strong> Project-based learning where students design, test, and iterate.</div>
@@ -96,58 +46,31 @@
         <p>Our purchasing approach is simple: prioritize items that unlock immediate instruction and give students multiple attempts. We avoid long delays and focus on what gets a lab or build running this week.</p>
       </section>
 
-      <section class="section" aria-labelledby="approach">
-        <h2 id="approach">Our Approach to Learning</h2>
+      <section class="section">
+        <h2>Our Approach to Learning</h2>
         <p>Students learn best by building and testing ideas with their own hands. We support teacher-designed activities that include prediction, trial, reflection, and revision. This cycle helps students develop persistence, attention to detail, and practical engineering judgment—all transferable skills for college and careers.</p>
       </section>
 
-      <section class="section" aria-labelledby="principles">
-        <h2 id="principles">How We Choose</h2>
-        <p>We prioritize items that: (1) enable whole-class participation, (2) allow iteration and safe retries, (3) align with current instruction so students use them now—not someday, and (4) are affordable and purchased with cost efficiency in mind. No waste.</p>
+      <section class="section">
+        <h2>How We Choose</h2>
+        <p>We prioritize items that (1) enable whole-class participation, (2) allow iteration and safe retries, (3) align with current instruction so students use them now—not “someday,” and (4) are affordable and efficient. No waste.</p>
       </section>
 
-      <section class="section" aria-labelledby="projects">
-        <h2 id="projects">Past Projects</h2>
-        <p>Our purchases go directly to classroom builds—real materials for real student ideas. Projects change each semester as students generate new designs and challenges, but all follow the same goal—learn by doing with accessible, real materials.</p>
-        <ul class="board">
-          <li><strong>Motors and magnets:</strong> Life-size student-built “Go-Fish” game modeled after the toddler magnetic toy, scaled up with working motors and custom catches.</li>
-          <li><strong>Paint and color:</strong> Classroom-safe paints so students can personalize and decorate their finished creations.</li>
-          <li><strong>Elastic tubing:</strong> Components for a student-made giant slingshot project exploring tension, energy storage, and launch mechanics.</li>
-          <li><strong>3-Phase Motor Controller:</strong> For student-engineered axial-flux motor builds testing torque, coil balance, and power delivery.</li>
-          <li><strong>Prusa MK4S 3D Printer:</strong> High-reliability printer supporting rapid prototyping and iterative design in engineering classes.</li>
-          <li><strong>PLA Filament:</strong> Ongoing stock for student prototypes and replacement parts across multiple engineering projects.</li>
-          <li><strong>Wood and screws:</strong> Used for a three-person table maze that teaches cooperation, precision, and spatial reasoning.</li>
-          <li><strong>Toothpicks, hot glue, and eggs:</strong> Supplies for the annual Physics Egg Drop challenge—students design and test impact-resistant structures using simple materials and real eggs.</li>
-          <li><strong>Fabric and flexible materials:</strong> Used in a student-designed “fidget glove” exploring tactile design and wearable engineering.</li>
-        </ul>
-        <p>Each project focuses on active experimentation, cost efficiency, and materials that students can touch, test, and refine—no waste, no idle supplies. Many materials are reused and repurposed from past builds, stretching every dollar and giving new students a fresh start with proven tools.</p>
-      </section>
-
-      <section class="section" aria-labelledby="impact">
-        <h2 id="impact">How It Helps Students</h2>
-        <div class="grid">
-          <div class="pill"><strong>Labs run on time.</strong> Materials on hand prevent cancellations and lost instructional minutes.</div>
-          <div class="pill"><strong>Iterate &amp; improve.</strong> Extra parts let students test, fail safely, fix, and try again.</div>
-          <div class="pill"><strong>Career skills.</strong> Real tools and workflows build confidence for internships and college labs.</div>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="transparency">
-        <h2 id="transparency">Accountability &amp; Transparency</h2>
+      <section class="section">
+        <h2>Accountability &amp; Transparency</h2>
         <p>We maintain internal records of funded purchases for accountability and can provide summaries to donors or reviewers upon request. We are a 501(c)(3) public charity.</p>
       </section>
 
-      <section class="section" id="donate" aria-labelledby="donate-h" tabindex="-1">
-        <h2 id="donate-h">Donate</h2>
+      <section class="section" id="donate">
+        <h2>Donate</h2>
         <p>Every dollar directly funds real materials for students in Los Angeles classrooms—from wood and wires to microscopes and motors.</p>
-<p>
-You can make a donation to the foundation directly on 
-<a href="https://www.zeffy.com/en-US/donation-form/donations-140" target="_blank" rel="noopener">Zeffy</a> 
-(link opens Zeffy’s secure donation page), or use the embedded form from their site below. 
-Zeffy is a 100% free fundraising platform for nonprofits that covers all transaction fees, 
-so every dollar goes directly to classroom materials—aligning with our mission of making sure money is used for children, not charges. 
-After donating, you’ll receive an email receipt from Zeffy which can be used for tax records.
-</p>
+        <p>
+          You can make a donation directly on
+          <a href="https://www.zeffy.com/en-US/donation-form/donations-140" target="_blank" rel="noopener">Zeffy</a>
+          (opens in a new tab), or use the embedded form below.
+          Zeffy is a 100% free fundraising platform for nonprofits that covers all transaction fees,
+          so every dollar goes to classroom materials—not charges.
+        </p>
 
         <div style="position:relative;overflow:hidden;height:800px;width:100%;">
           <iframe
@@ -164,10 +87,10 @@ After donating, you’ll receive an email receipt from Zeffy which can be used f
         </p>
       </section>
 
-      <section class="section" aria-labelledby="founder">
-        <h2 id="founder">Founder</h2>
+      <section class="section">
+        <h2>Founder</h2>
         <div class="founder">
-          <img class="headshot" src="https://raw.githubusercontent.com/rainbowpossibility/website/87545ffef46b04246c64e15cbbe603504930d97f/WebsiteHeadshot.png"
+          <img class="headshot" src="assets/WebsiteHeadshot.png"
                alt="Headshot of Kristopher Brackebusch" />
           <div>
             <h3 style="margin-top:0">Kristopher Brackebusch</h3>
@@ -176,8 +99,8 @@ After donating, you’ll receive an email receipt from Zeffy which can be used f
         </div>
       </section>
 
-      <section class="section" aria-labelledby="board">
-        <h2 id="board">Officers &amp; Board</h2>
+      <section class="section">
+        <h2>Officers &amp; Board</h2>
         <ul class="board">
           <li><strong>Kristopher Brackebusch</strong> — President</li>
           <li><strong>Jose Castaneda</strong> — Secretary / Treasurer</li>
@@ -188,17 +111,21 @@ After donating, you’ll receive an email receipt from Zeffy which can be used f
         </ul>
       </section>
 
-<section class="section" aria-labelledby="docs">
-  <h2 id="docs">Public Documents</h2>
-  <p>Rainbow Possibility Foundation is recognized by the IRS as a 501(c)(3) public charity. Our federal determination letter is available for reference below.</p>
-  <p><a href="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/IRS501C3ApprovalLetter.pdf" target="_blank" rel="noopener" class="btn secondary">View 501(c)(3) Letter (PDF)</a></p>
-</section>
+      <section class="section">
+        <h2>Public Documents</h2>
+        <p>Rainbow Possibility Foundation is recognized by the IRS as a 501(c)(3) public charity. Our federal determination letter is available for reference below.</p>
+        <p>
+          <a href="assets/IRS501C3ApprovalLetter.pdf"
+             target="_blank" rel="noopener" class="btn secondary">
+            View 501(c)(3) Letter (PDF)
+          </a>
+        </p>
+      </section>
 
-      
-      <section class="section" aria-labelledby="quote">
-        <h2 id="quote" style="text-align:center">“Rainbow Possibility”</h2>
+      <section class="section">
+        <h2 style="text-align:center">“Rainbow Possibility”</h2>
         <img class="logo" style="max-width:820px;margin:10px auto 0"
-             src="https://raw.githubusercontent.com/rainbowpossibility/website/refs/heads/main/RainbowQuoteWebsiteCropped.png"
+             src="assets/RainbowQuoteWebsiteCropped.png"
              alt="I am forever learning, growing, and becoming more of who I wish to be. For my life is a journey, and I am rainbow possibility." />
       </section>
     </main>

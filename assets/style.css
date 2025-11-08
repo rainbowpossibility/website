@@ -1,0 +1,240 @@
+:root {
+  --bg1:#f3f4f6;
+  --bg2:#ffffff;
+  --card:#fff;
+  --text:#1f2937;
+  --muted:#4b5563;
+  --border:#e5e7eb;
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+* { box-sizing:border-box; }
+html, body { height:100%; }
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
+  color:var(--text);
+}
+
+.container {
+  max-width:980px;
+  margin:48px auto;
+  padding:0 20px;
+}
+
+.card {
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.hero {
+  padding:28px 24px 14px;
+  text-align:center;
+  background:
+    radial-gradient(1200px 200px at 50% -80px, rgba(99,102,241,.12), transparent),
+    linear-gradient(90deg,
+      rgba(239,68,68,.08),
+      rgba(245,158,11,.08),
+      rgba(234,179,8,.08),
+      rgba(34,197,94,.08),
+      rgba(59,130,246,.08),
+      rgba(139,92,246,.08),
+      rgba(236,72,153,.08)
+    );
+  border-bottom:1px solid var(--border);
+}
+
+.logo {
+  max-width:820px;
+  width:min(92vw,820px);
+  height:auto;
+  display:block;
+  margin:8px auto;
+}
+
+.tag {
+  display:inline-block;
+  margin:10px auto 6px;
+  padding:6px 10px;
+  font-size:12px;
+  letter-spacing:.03em;
+  text-transform:uppercase;
+  color:#374151;
+  border-radius:999px;
+  background:#fff;
+  border:1px solid var(--border);
+}
+
+.rainbow-rule {
+  height:4px;
+  background:linear-gradient(90deg,#ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ec4899);
+  border-radius:2px;
+  margin:12px auto 12px;
+  width:min(92vw,860px);
+}
+
+/* Nav */
+.main-nav {
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  padding:6px 0 4px;
+}
+
+.nav-link {
+  font-size:14px;
+  padding:6px 14px;
+  border-radius:999px;
+  border:1px solid rgba(148,163,184,0.7);
+  text-decoration:none;
+  color:#374151;
+  background:rgba(249,250,251,0.9);
+}
+
+.nav-link:hover {
+  background:#111827;
+  color:#fff;
+  border-color:#111827;
+}
+
+.nav-link.active {
+  background:#111827;
+  color:#fff;
+  border-color:#111827;
+}
+
+/* Sections */
+.section {
+  padding:22px 20px;
+}
+
+.section + .section {
+  border-top:1px solid var(--border);
+}
+
+h1, h2, h3 {
+  margin:0 0 10px;
+}
+
+h1 { font-size:clamp(22px,4vw,28px); }
+h2 { font-size:clamp(18px,3vw,22px); margin-top:8px; }
+h3 { font-size:clamp(16px,2.4vw,18px); margin-top:6px; }
+
+p {
+  margin:8px 0 14px;
+  color:var(--muted);
+  line-height:1.6;
+}
+
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:14px;
+  margin-top:8px;
+}
+
+.pill {
+  background:#f8fafc;
+  border:1px solid var(--border);
+  padding:10px 12px;
+  border-radius:12px;
+}
+
+.founder {
+  display:grid;
+  grid-template-columns:84px 1fr;
+  gap:16px;
+  align-items:center;
+  max-width:680px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.headshot {
+  width:84px;
+  height:84px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid var(--border);
+}
+
+.board {
+  list-style:none;
+  padding:0;
+  margin:8px auto 0;
+  max-width:640px;
+  text-align:left;
+}
+
+.board li {
+  padding:8px 0;
+  border-bottom:1px dashed var(--border);
+}
+
+.board li:last-child {
+  border-bottom:0;
+}
+
+.actions {
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin:12px 0 2px;
+}
+
+.btn {
+  appearance:none;
+  border:0;
+  background:#111827;
+  color:#fff;
+  padding:10px 14px;
+  border-radius:10px;
+  cursor:pointer;
+  font-weight:600;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  box-shadow:0 6px 16px rgba(17,24,39,.15);
+}
+
+.btn.secondary {
+  background:linear-gradient(90deg,
+    #ef4444,#f59e0b,#eab308,#22c55e,#3b82f6,#8b5cf6,#ec4899);
+  color:#fff;
+  border:none;
+  font-weight:700;
+  box-shadow:0 4px 12px rgba(0,0,0,0.2);
+  transition:transform .1s ease, box-shadow .1s ease;
+}
+
+.btn.secondary:hover {
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(0,0,0,0.25);
+}
+
+footer {
+  text-align:center;
+  color:#6b7280;
+  font-size:13px;
+  padding:18px 10px 36px;
+}
+
+@media (max-width:520px) {
+  .founder {
+    grid-template-columns:60px 1fr;
+  }
+  .headshot {
+    width:60px;
+    height:60px;
+  }
+}
