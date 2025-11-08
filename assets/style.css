@@ -9,17 +9,59 @@
   --radius:18px;
 }
 
+/* ============================
+   GLOBAL RESET / BASE
+============================ */
 * { box-sizing:border-box; }
 html, body { height:100%; }
 html { scroll-behavior:smooth; }
 
 body {
   margin:0;
-  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  font-family:'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight:400;
+  line-height:1.6;
   background:linear-gradient(180deg,var(--bg1),var(--bg2));
   color:var(--text);
 }
 
+/* ============================
+   TYPOGRAPHY HIERARCHY
+============================ */
+
+/* Major Section Headings */
+h1, h2 {
+  font-family:'Bebas Neue', sans-serif;
+  letter-spacing:0.02em;
+  font-weight:400;
+  text-transform:uppercase;
+  color:#1f2937;
+  margin-bottom:8px;
+}
+
+/* Subheadings / Nav / Buttons */
+h3, .nav-link, .btn {
+  font-family:'Nunito Sans', 'Inter', sans-serif;
+  font-weight:600;
+  letter-spacing:0.01em;
+}
+
+/* Quotes / reflective text */
+blockquote, .quote-text {
+  font-family:'Lora', 'Inter', serif;
+  font-style:italic;
+  font-weight:400;
+  color:#374151;
+}
+
+/* Bamboo logo + inline */
+.bamboo-inline, .hero-logo {
+  font-family:'Bamboo', sans-serif;
+}
+
+/* ============================
+   CONTAINERS / CARDS
+============================ */
 .container {
   max-width:980px;
   margin:48px auto;
@@ -34,6 +76,9 @@ body {
   overflow:hidden;
 }
 
+/* ============================
+   HERO / LOGO
+============================ */
 .hero {
   padding:28px 24px 14px;
   text-align:center;
@@ -51,6 +96,35 @@ body {
   border-bottom:1px solid var(--border);
 }
 
+.hero-logo {
+  position: relative;
+  display: inline-block;
+  font-family: 'Bamboo', sans-serif;
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.1;
+  margin: 10px auto;
+  width: fit-content;
+
+  /* rainbow gradient inside the letters */
+  background: linear-gradient(
+    90deg,
+    #FF8A8A, #FF9E73, #FFB86A, #FFD46C, #FFE66D,
+    #DFFB8C, #BFF5A5, #9FF1AE, #82F0A8, #6CEFC1,
+    #6FDDEB, #72C4FA, #7AA9FA, #8E96F7, #A088F5,
+    #B180F3, #9C6BF0, #8354E7
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+
+  /* thin dark outline – NO blur, letters stay sharp */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  text-stroke: 0.5px rgba(0, 0, 0, 0.35); /* fallback */
+}
+
 .logo {
   max-width:820px;
   width:min(92vw,820px);
@@ -59,6 +133,9 @@ body {
   margin:8px auto;
 }
 
+/* ============================
+   TAG + DIVIDERS
+============================ */
 .tag {
   display:inline-block;
   margin:10px auto 6px;
@@ -80,7 +157,9 @@ body {
   width:min(92vw,860px);
 }
 
-/* Nav */
+/* ============================
+   NAVIGATION
+============================ */
 .main-nav {
   display:flex;
   justify-content:center;
@@ -97,6 +176,7 @@ body {
   text-decoration:none;
   color:#374151;
   background:rgba(249,250,251,0.9);
+  transition:background .2s, color .2s, border-color .2s;
 }
 
 .nav-link:hover {
@@ -111,17 +191,15 @@ body {
   border-color:#111827;
 }
 
-/* Sections */
+/* ============================
+   SECTIONS
+============================ */
 .section {
   padding:22px 20px;
 }
 
 .section + .section {
   border-top:1px solid var(--border);
-}
-
-h1, h2, h3 {
-  margin:0 0 10px;
 }
 
 h1 { font-size:clamp(22px,4vw,28px); }
@@ -183,6 +261,9 @@ p {
   border-bottom:0;
 }
 
+/* ============================
+   BUTTONS
+============================ */
 .actions {
   display:flex;
   gap:10px;
@@ -205,6 +286,7 @@ p {
   align-items:center;
   gap:8px;
   box-shadow:0 6px 16px rgba(17,24,39,.15);
+  transition:transform .1s ease, box-shadow .1s ease;
 }
 
 .btn.secondary {
@@ -214,14 +296,16 @@ p {
   border:none;
   font-weight:700;
   box-shadow:0 4px 12px rgba(0,0,0,0.2);
-  transition:transform .1s ease, box-shadow .1s ease;
 }
 
-.btn.secondary:hover {
+.btn:hover {
   transform:translateY(-1px);
   box-shadow:0 6px 14px rgba(0,0,0,0.25);
 }
 
+/* ============================
+   FOOTER
+============================ */
 footer {
   text-align:center;
   color:#6b7280;
@@ -229,6 +313,59 @@ footer {
   padding:18px 10px 36px;
 }
 
+/* ============================
+   QUOTE SECTION (matches hero)
+============================ */
+.quote-section {
+  text-align:center;
+  padding:40px 20px 60px;
+  background:linear-gradient(180deg,#fafafa,#ffffff);
+}
+
+.quote-text {
+  font-family:'Lora','Inter',serif;
+  font-size:clamp(18px,2.4vw,22px);
+  font-style:italic;
+  color:#374151;
+  line-height:1.7;
+  margin:0 auto 16px;
+  max-width:720px;
+}
+
+.bamboo-inline {
+  font-family:'Bamboo',sans-serif;
+  font-weight:400;
+  display:inline-block;
+  position:relative;
+  z-index:1;
+  background:linear-gradient(
+    90deg,
+    #FF8A8A, #FF9E73, #FFB86A, #FFD46C, #FFE66D,
+    #DFFB8C, #BFF5A5, #9FF1AE, #82F0A8, #6CEFC1,
+    #6FDDEB, #72C4FA, #7AA9FA, #8E96F7, #A088F5,
+    #B180F3, #9C6BF0, #8354E7
+  );
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  color:transparent;
+
+  /* thin dark outline – NO blur, letters stay sharp */
+  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
+  text-stroke: 0.5px rgba(0, 0, 0, 0.35); /* fallback */
+}
+
+.quote-author {
+  display:block;
+  font-family:'Inter',sans-serif;
+  font-size:15px;
+  color:#6b7280;
+  margin-top:6px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
 @media (max-width:520px) {
   .founder {
     grid-template-columns:60px 1fr;
@@ -237,40 +374,4 @@ footer {
     width:60px;
     height:60px;
   }
-}
-
-/* === Rainbow Possibility Text Logo === */
-@font-face {
-  font-family: 'Bamboo';
-  src: url('/assets/fonts/Bamboo-Regular.woff2') format('woff2');
-  font-display: swap;
-}
-
-.hero-logo {
-  position: relative;
-  display: inline-block;
-  font-family: 'Bamboo', sans-serif;
-  font-size: clamp(40px, 7vw, 72px);
-  font-weight: 400;
-  text-align: center;
-  line-height: 1.1;
-  margin: 10px auto;
-  width: fit-content;
-
-  /* rainbow gradient inside the letters */
-  background: linear-gradient(
-    90deg,
-    #FF8A8A, #FF9E73, #FFB86A, #FFD46C, #FFE66D,
-    #DFFB8C, #BFF5A5, #9FF1AE, #82F0A8, #6CEFC1,
-    #6FDDEB, #72C4FA, #7AA9FA, #8E96F7, #A088F5,
-    #B180F3, #9C6BF0, #8354E7
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-
-  /* thin dark outline – NO blur, letters stay sharp */
-  -webkit-text-stroke: 0.5px rgba(0, 0, 0, 0.35);
-  text-stroke: 0.5px rgba(0, 0, 0, 0.35); /* some browsers ignore this, that’s okay */
 }
