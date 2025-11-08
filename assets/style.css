@@ -385,15 +385,14 @@ footer {
   margin-top:6px;
 }
 
-
-body::before {
+.container::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
-  background: url("assets/RainbowPossibilityLogo.png") no-repeat center 20%;
-  background-size: 2800px auto; /* bigger = more edge-only visibility */
-  opacity: 0.05;                /* subtle and elegant */
-  mix-blend-mode: multiply;     /* softens the gray/white cloud */
+  background: url("assets/RainbowPossibilityLogo.png") no-repeat center 30%;
+  background-size: 2800px auto; /* adjust size */
+  opacity: 0.06;                /* make more or less visible */
+  filter: brightness(1.1) contrast(0.9);
   pointer-events: none;
   z-index: 0;
 }
@@ -402,6 +401,12 @@ body::before {
   position: relative;
   z-index: 1;
 }
+
+.card {
+  position: relative;
+  z-index: 2;
+}
+
 
 
 /* ============================
