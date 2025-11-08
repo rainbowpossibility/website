@@ -346,6 +346,17 @@ footer {
   padding:18px 10px 36px;
 }
 
+.footer-logo {
+  width: 80px;              /* small and tidy */
+  height: auto;
+  display: block;           /* centers on its own line */
+  margin: 0 auto 6px;       /* centers horizontally, small gap below */
+  opacity: 0.25;            /* faint transparency */
+  border-radius: 12px;      /* soft corners for white box */
+  filter: brightness(1.05) contrast(0.95);
+}
+
+
 /* ============================
    QUOTE SECTION
 ============================ */
