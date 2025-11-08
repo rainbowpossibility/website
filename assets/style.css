@@ -247,15 +247,27 @@ footer {
 }
 
 .hero-logo {
+  position: relative;
+  display: inline-block;
   font-family: 'Bamboo', sans-serif;
   font-size: clamp(40px, 7vw, 72px);
   font-weight: 400;
   text-align: center;
   line-height: 1.1;
   margin: 10px auto;
-  width: fit-content;
-  display: inline-block;
+}
 
+/* bottom layer: shadow only */
+.hero-logo .text-shadow {
+  position: absolute;
+  inset: 0;
+  color: rgba(0, 0, 0, 0.4);
+  filter: blur(4px);
+  z-index: 0;
+}
+
+/* top layer: gradient text */
+.hero-logo {
   background: linear-gradient(
     90deg,
     #FF8A8A, #FF9E73, #FFB86A, #FFD46C, #FFE66D,
@@ -267,9 +279,5 @@ footer {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-
-  /* refined, subtle shadow behind letters */
-  text-shadow:
-    0 2px 4px rgba(0, 0, 0, 0.15),
-    0 0 8px rgba(0, 0, 0, 0.08);
+  z-index: 1;
 }
