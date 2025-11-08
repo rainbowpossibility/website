@@ -239,10 +239,10 @@ footer {
   }
 }
 
-/* === Rainbow Possibility Logo === */
+/* === Rainbow Possibility Text Logo === */
 @font-face {
   font-family: 'Bamboo';
-  src: url('/assets/fonts/Bamboo-Regular.woff2') format('woff2');
+  src: url('fonts/Bamboo-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -254,6 +254,7 @@ footer {
   line-height: 1.1;
   margin: 10px auto;
   width: fit-content;
+  display: inline-block; /* helps background-clip behave consistently */
 
   background: linear-gradient(
     90deg,
