@@ -242,7 +242,7 @@ footer {
 /* === Rainbow Possibility Text Logo === */
 @font-face {
   font-family: 'Bamboo';
-  src: url('fonts/Bamboo-Regular.woff2') format('woff2');
+  src: url('/assets/fonts/Bamboo-Regular.woff2') format('woff2');
   font-display: swap;
 }
 
@@ -267,4 +267,9 @@ footer {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
+
+  /* subtle dark “glow” to keep dots/whitespace readable on rainbow bg */
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 0 6px rgba(0, 0, 0, 0.15);
 }
